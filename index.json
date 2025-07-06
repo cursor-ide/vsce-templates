@@ -1,3 +1,62 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:295450078309f98cc36c1ae8558706f051e1d0f1c2a9cb4b2f67be79574c3313
-size 2119
+{
+    "basic": {
+        "name": "basic",
+        "description": "Minimal Hello-World VSCode Web Extension (TypeScript, Deno).",
+        "url": "https://github.com/cursor-ide/vsce-templates/raw/refs/heads/main/basic/main.zip",
+        "tags": [
+            "typescript",
+            "web",
+            "basic"
+        ],
+        "version": "1.0.0",
+        "author": "Cursor-ide",
+        "license": "MIT",
+        "homepage": "https://github.com/cursor-ide/vsce-templates/basic",
+        "sha256": "null"
+    },
+    "language-server": {
+        "name": "language-server",
+        "description": "Minimal Hello-World VSCode Language Server (TypeScript, Deno).",
+        "url": "https://github.com/cursor-ide/vsce-templates/raw/refs/heads/main/language-server/main.zip",
+        "tags": [
+            "typescript",
+            "language-server",
+            "basic"
+        ],
+        "version": "1.0.0",
+        "author": "Cursor-ide",
+        "license": "MIT",
+        "homepage": "https://github.com/cursor-ide/vsce-templates/language-server",
+        "sha256": "null"
+    },
+    "webview": {
+        "name": "webview",
+        "description": "Minimal Hello-World VSCode Webview (TypeScript, Deno).",
+        "url": "https://github.com/cursor-ide/vsce-templates/raw/refs/heads/main/webview/main.zip",
+        "tags": [
+            "typescript",
+            "webview",
+            "basic"
+        ],
+        "version": "1.0.0",
+        "author": "Cursor-ide",
+        "license": "MIT",
+        "homepage": "https://github.com/cursor-ide/vsce-templates/webview",
+        "sha256": "null"
+    },
+    "treeview": {
+        "name": "treeview",
+        "description": "Minimal Hello-World VSCode TreeView (TypeScript, Deno).",
+        "url": "https://github.com/cursor-ide/vsce-templates/raw/refs/heads/main/treeview/main.zip",
+        "tags": [
+            "typescript",
+            "treeview",
+            "basic"
+        ],
+        "version": "1.0.0",
+        "author": "Cursor-ide",
+        "license": "MIT",
+        "homepage": "https://github.com/cursor-ide/vsce-templates/treeview",
+        "sha256": "null"
+    }
+}
