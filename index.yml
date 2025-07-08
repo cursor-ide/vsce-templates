@@ -10,7 +10,7 @@ basic:
   author: Cursor-ide
   license: MIT
   homepage: https://github.com/cursor-ide/vsce-templates/basic
-  sha256: "null"
+  sha256: "aa64e208095ca224fbe72f3b80613efade6ce597ce591860452d01475f013747"
 
 language-server:
   name: language-server
@@ -24,7 +24,7 @@ language-server:
   author: Cursor-ide
   license: MIT
   homepage: https://github.com/cursor-ide/vsce-templates/language-server
-  sha256: "null"
+  sha256: "35706e1e7a9707f78a3d4ed53d0c0a948ebf170e1d31e19ad1d90257f3b0deb9"
 
 webview:
   name: webview
@@ -38,7 +38,7 @@ webview:
   author: Cursor-ide
   license: MIT
   homepage: https://github.com/cursor-ide/vsce-templates/webview
-  sha256: "null"
+  sha256: "51a38658e7acdc25759757fc0ca33d0f515c943b82401106f0a0878c1c877e90"
 
 treeview:
   name: treeview
@@ -52,4 +52,4 @@ treeview:
   author: Cursor-ide
   license: MIT
   homepage: https://github.com/cursor-ide/vsce-templates/treeview
-  sha256: "null"
+  sha256: "50c4c5e6b26b5d4e0bc51cf2e4b277b8cd65a4a0a5887f64d5bf11400a860df4"
