@@ -1,9 +1,9 @@
 # VSCE Template Registry <!-- omit in toc -->
 
-[![JSON Schema ✓](https://img.shields.io/badge/schema-valid-brightgreen?logo=json)](https://github.com/vsce-templates/index/blob/main/index.json)
+[![YAML Schema ✓](https://img.shields.io/badge/schema-valid-brightgreen?logo=yaml)](https://github.com/vsce-templates/index/blob/main/index.yml)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-A public catalogue of scaffolding templates for building **Deno-native 🦕 ⚡ VSCode Extensions** with the [`vsce`](https://github.com/vsce-dev/cli) CLI.
+A public registry of scaffolding templates for building **Deno-native 🦕 ⚡ VSCode Extensions** with the [`vsce`](https://github.com/vsce-dev/cli) CLI.
 
 ---
 
@@ -26,24 +26,27 @@ deno install -A -f -q -n vsce jsr:@vsce/cli@latest
 # List all community templates
 vsce templates list
 
-# Scaffold a new extension from the “react-panel” template
+# Scaffold a new extension from the "react-panel" template
 vsce create my-extension --template react-panel
 ```
 
-By default, the CLI fetches  
-`https://raw.githubusercontent.com/vsce-templates/index/main/index.json`.  
+By default, the CLI fetches:
+[`https://raw.githubusercontent.com/cursor-ide/vsce-templates/refs/heads/main/index.yml`](https://raw.githubusercontent.com/cursor-ide/vsce-templates/refs/heads/main/index.yml').
+
 You may override this via `vsce.yml`:
 
 ```yaml
-create:
-  registry: "https://example.com/my-private-index.json"
+templates:
+  registry: 'https://raw.githubusercontent.com/cursor-ide/vsce-templates/refs/heads/main/index.yml',
+  cache: true,
+  verifyHash: true,
 ```
 
 ---
 
 ## Template Manifest Schema
 
-The registry is a **single JSON array**; each element conforms to:
+The registry is a **single YAML array**; each element conforms to:
 
 | Field        | Type                | Required | Description                                                       |
 |--------------|---------------------|----------|-------------------------------------------------------------------|
@@ -57,7 +60,7 @@ The registry is a **single JSON array**; each element conforms to:
 | `homepage`   | `string` (URL)      | ✖︎        | Project URL or documentation                                      |
 | `sha256`     | `string`            | ✖︎        | SHA-256 checksum of the archive (integrity verification)          |
 
-> **Tip:** Use [JSON Schema](https://json-schema.org/) validation (`npm i -g ajv-cli`) before opening a PR.
+> **Tip:** Use YAML schema validation tools to verify your entries before opening a PR.
 
 ---
 
@@ -65,7 +68,7 @@ The registry is a **single JSON array**; each element conforms to:
 
 1. **Root directory** — When unpacked, the archive must contain a **single top-level folder** (same as `name`).  
 2. **No pre-installed dependencies** — Keep `node_modules` / `dist` out.  
-3. **`README.md`** explaining the template’s features & instructions.  
+3. **`README.md`** explaining the template's features & instructions.  
 4. **License** — Each template must include a recognized open-source license file.
 
 Optional niceties:
@@ -79,7 +82,7 @@ Optional niceties:
 
 1. Fork **this** repo and create a new branch.
 2. Upload your template archive to a permanent location (GitHub Release asset, S3, etc.).
-3. Append a new object to `index.json` following the schema above.
+3. Append a new object to `index.yml` following the schema above.
 4. Commit + push; ensure **CI** passes (lint & schema validation).
 5. Open a Pull Request – please include:
    - Link to source code  
@@ -93,7 +96,7 @@ Your template becomes instantly available to the community!
 
 ## License
 
-The registry index (`index.json`) is licensed under the **MIT License**.  
+The registry index (`index.yml`) is licensed under the **MIT License**.  
 Individual templates are licensed as stated in their own repositories.
 
 ---
